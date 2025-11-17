@@ -109,9 +109,14 @@ body {
     
     color: #ECECEC;
     border: 2px solid #515151;
+    width: 170px;
 }
 
-
+@media (max-width:439px){
+.home .se{
+  margin-bottom: 10px;
+}
+}
 .se{
     background-color: #515151;
 }
@@ -127,9 +132,31 @@ body {
 
 
 .profile-wrapper {
+  width: 100%;
+  max-width: 370px;
+  margin: 0 auto;
   position: relative;
-  display: inline-block;
   z-index: 5;
+}
+
+.profile-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #372f2f;
+}
+@media (max-width: 768px) {
+  .profile-wrapper {
+    max-width: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-wrapper {
+    max-width: 200px;
+  }
 }
 
 .profile-glow {
@@ -144,18 +171,8 @@ box-shadow:
   z-index: -1;
 }
 
-.profile-img {
-  width: 370px;
-  height: 370px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #372f2f;
-  align-self: self-start;
- 
-}
-.photo-hight{
-    height: 100%;
-}
+
+
 
 .contact-icons a{
     color: var(--secondary);
@@ -233,7 +250,7 @@ box-shadow:
 
 .containe {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 25px;
 }
 
@@ -375,9 +392,11 @@ box-shadow:
 .contact-grid {
   display: grid;
   gap: 25px;
-  padding: 0 20px;
-  width: 90%;
+  padding: 0 100px;
+  
   margin: auto;
+  justify-content: center;
+  
 }
 
 @media (min-width: 992px) {
