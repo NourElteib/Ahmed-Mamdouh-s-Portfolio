@@ -64,6 +64,7 @@ body {
     }
     .active{
       color: #d9d9d9 !important;
+      font-weight: bold;
     }
    .navbar{
      box-shadow: 0 0 10px rgba(255,255,255,0.05);
@@ -477,7 +478,7 @@ section.show {
   height: 10px;
   width: 100%;
   color: var(--text-light);
-  margin-top: 70px;
+  margin-top: 50px;
   
 }
 footer{
@@ -486,7 +487,6 @@ footer{
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-bottom: 20px;
   font-size: larger;
   padding: 30px;
 }

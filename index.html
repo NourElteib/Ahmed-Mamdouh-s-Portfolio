@@ -45,33 +45,13 @@
 </nav>
 <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarLeft">
 
-
+<div class="offcanvas-header d-flex justify-content-end align-items-center ">
+    <button class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+  </div>
   <div class="offcanvas-body">
 
-    <a class="text-secondary active" href="#home">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-<g clip-path="url(#clip0_4418_9816)">
-<path d="M9.02 2.84016L3.63 7.04016C2.73 7.74016 2 9.23016 2 10.3602V17.7702C2 20.0902 3.89 21.9902 6.21 21.9902H17.79C20.11 21.9902 22 20.0902 22 17.7802V10.5002C22 9.29016 21.19 7.74016 20.2 7.05016L14.02 2.72016C12.62 1.74016 10.37 1.79016 9.02 2.84016Z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-<path d="M12 17.9902V14.9902" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-</g>
-<defs>
-<clipPath id="clip0_4418_9816">
-<rect width="24" height="24" fill="white"/>
-</clipPath>
-</defs>
-</svg></i> Home</a>
-    <a class="text-secondary"  href="#about">
-       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-<g clip-path="url(#clip0_3111_32739)">
-<path d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-<path d="M20.5901 22C20.5901 18.13 16.7402 15 12.0002 15C7.26015 15 3.41016 18.13 3.41016 22" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-</g>
-<defs>
-<clipPath id="clip0_3111_32739">
-<rect width="24" height="24" fill="white"/>
-</clipPath>
-</defs>
-</svg> About</a>
+   <a class="text-secondary active" href="#home"><i class="bi bi-house-door"></i> Home</a>
+    <a class="text-secondary"  href="#about"><i class="bi bi-person"></i> About</a>
     <a class="text-secondary" href="#skills"><i class="bi bi-lightning"></i> Skills</a>
     <a class="text-secondary" href="#projects"><i class="bi bi-code-slash"></i> Projects</a>
 
@@ -85,7 +65,7 @@
 
     <!-- LEFT -->
     <div class="left text-lg-start text-center mt-5 order-2 order-lg-1">
-      <h1 class="fw-bold mb-4  " >Ahmed Mamdouh</h1>
+      <h1 class="fw-bold mb-4" >Ahmed Mamdouh</h1>
 
       <h3 id="typed" class="text-secondary fw-bold mb-4">
         Embedded Software Engineer
@@ -556,6 +536,30 @@ sections.forEach(section => {
     }, 600); 
   });
 
+
+
+  const offcanvasLinks = document.querySelectorAll('#sidebarLeft a');
+  const offcanvasElement = document.getElementById('sidebarLeft');
+  const bsOffcanvas = new bootstrap.Offcanvas(offcanvasElement);
+
+  offcanvasLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      bsOffcanvas.hide(); 
+    });
+  });
+
+const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+  function setActiveLink(links, clickedLink) {
+    links.forEach(link => link.classList.remove('active'));
+    clickedLink.classList.add('active');
+  }
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      setActiveLink(navLinks, link);
+    });
+  });
 
 </script>
 </body>
