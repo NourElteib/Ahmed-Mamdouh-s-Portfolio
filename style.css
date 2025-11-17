@@ -148,6 +148,7 @@ body {
   border-radius: 50%;
   border: 3px solid #372f2f;
 }
+
 @media (max-width: 768px) {
   .profile-wrapper {
     max-width: 240px;
@@ -160,19 +161,29 @@ body {
   }
 }
 
+
 .profile-glow {
   position: absolute;
   inset: -20px;
   border-radius: 50%;
- 
-box-shadow:
-  0 0 22px rgba(119, 100, 105, 0.35),
-  inset 0 0 16px rgba(106, 91, 95, 0.25);
-
   z-index: -1;
+
+  animation: glowPulse 3s infinite ease-in-out;
 }
 
-
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 0 rgba(119, 100, 105, 0.0);
+  }
+  50% {
+    box-shadow: 
+      0 0 28px rgba(119, 100, 105, 0.55),
+      inset 0 0 18px rgba(119, 100, 105, 0.35);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(119, 100, 105, 0.0);
+  }
+}
 
 
 .contact-icons a{
@@ -478,7 +489,7 @@ section.show {
   height: 10px;
   width: 100%;
   color: var(--text-light);
-  margin-top: 50px;
+  margin-top: 20px;
   
 }
 footer{
