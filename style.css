@@ -358,6 +358,10 @@ box-shadow:
   
 }
 
+.red{
+  color: #7FE7C4;
+  font-weight: bold;
+}
 
 .row:nth-child(odd) .card::before {
   right: -40px;
@@ -392,8 +396,8 @@ box-shadow:
 .contact-grid {
   display: grid;
   gap: 25px;
-  padding: 0 100px;
-  
+  padding: 0 30px;
+ 
   margin: auto;
   justify-content: center;
   
@@ -473,8 +477,8 @@ section.show {
   height: 10px;
   width: 100%;
   color: var(--text-light);
-  margin-top: 130px;
-  margin-bottom:30px;
+  margin-top: 70px;
+  
 }
 footer{
   display: flex;
@@ -482,11 +486,19 @@ footer{
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-size: larger;
+  padding: 30px;
 }
 footer a{
   color: var(--text);
   font-weight: bolder;
  text-decoration: none;
+}
+.back{
+   color: #7FE7C4;
+   font-weight: 400;
+}
+.back{
+  animation: infinite 2s ease-out float;
 }
